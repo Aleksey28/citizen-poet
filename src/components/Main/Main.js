@@ -1,11 +1,12 @@
 import './Main.css';
+import MainPage from "./MainPage/MainPage";
 
-function Main() {
+const Main = () => {
   return (
-    <main className="main">
-      Это тело
-    </main>
-  );
+    <div className="main">
+      <MainPage />
+    </div>
+  )
 }
 
 export default Main;
