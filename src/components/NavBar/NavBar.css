@@ -1,17 +1,13 @@
 .navBar {
-    padding: 50px 0 0 0;
+    padding: 54px 66px 0 66px;
     display: flex;
+    width: 180px;
+    height: 100%;
+    box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     justify-items: flex-start;
     flex-direction: column;
     background-color: #1A263D;
-    grid-area: navBar;
 }
 
-.firstButton {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}

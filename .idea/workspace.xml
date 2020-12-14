@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc302ed2-fea2-4908-84d7-a11f1161d9b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Main/MainPage/MainPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/MainPage/MainPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/MainButton/MainButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/MainButton/MainButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/PetitionButton/PetitionButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/PetitionButton/PetitionButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/ProfileButton/ProfileButton.js" afterDir="false" />
+    <list default="true" id="bc302ed2-fea2-4908-84d7-a11f1161d9b8" name="Default Changelist" comment="feat: Сделать каркас main страницы">
+      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/__text/main-page__text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/__title/main-page__title.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/main-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/main-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_active/navBar__button_main-active.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_no-active/navBar__button_all-petition-no-active.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_no-active/navBar__button_him-petition-no-active.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_no-active/navBar__button_profile-no-active.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/navBar_button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/MainPage/MainPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/MainPage/MainPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/MainButton/MainButton.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/MainButton/MainButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/PetitionButton/PetitionButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main-page/__subtitle/main-page__subtitle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/PetitionButton/PetitionButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/ProfileButton/ProfileButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/mainPage__image.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +59,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/img/navBar" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,8 +72,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607937402895</updated>
-      <workItem from="1607937418479" duration="12118000" />
+      <workItem from="1607937418479" duration="20673000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Сделать каркас main страницы">
+      <created>1607955518682</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607955518683</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,5 +97,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Сделать каркас main страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Сделать каркас main страницы" />
   </component>
 </project>

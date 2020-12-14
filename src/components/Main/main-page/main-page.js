@@ -1,43 +1,46 @@
-import './MainPage.css';
+import './main-page.css';
+import './__text/main-page__text.css';
+import './__title/main-page__title.css';
+import './__subtitle/main-page__subtitle.css';
+
+import imageMain from '../../../img/mainPage__image.jpg';
 
 const MainPage = () => {
   return (
-    <div className='mainPage'>
-      <div className='text'>
-        <p className="text__title">
-          И ты с беспечального детства
-        </p>
-        <p className="text__title">
+    <div className="main-page">
+      <div className="main-page__text">
+        <h2 className="main-page__title">
+          И ты с беспечального детства <br/>
           Ищи сочетания слов...
-        </p>
-        <p className="text__subtitle">
+        </h2>
+        <p className="main-page__subtitle">
           Ты должен быть гордым, как знамя; <br/>
           Ты должен быть острым, как меч; <br/>
           Как Данте, подземное пламя <br/>
           Должно тебе щеки обжечь! <br/>
         </p>
-        <p className="text__subtitle">
+        <p className="main-page__subtitle">
           Ты должен быть гордым, как знамя; <br/>
           Ты должен быть острым, как меч; <br/>
           Как Данте, подземное пламя <br/>
           Должно тебе щеки обжечь! <br/>
         </p>
-        <p className="text__subtitle">
+        <p className="main-page__subtitle">
           Ты должен быть гордым, как знамя; <br/>
           Ты должен быть острым, как меч; <br/>
           Как Данте, подземное пламя <br/>
           Должно тебе щеки обжечь! <br/>
         </p>
-        <p className="text__subtitle">
+        <p className="main-page__subtitle">
           Ты должен быть гордым, как знамя; <br/>
           Ты должен быть острым, как меч; <br/>
           Как Данте, подземное пламя <br/>
           Должно тебе щеки обжечь! <br/>
         </p>
       </div>
-      <div className="mainPage__image"></div>
+        <img src={imageMain} alt={'imageMain'} className="main-page__image"/>
     </div>
-  )
+  );
 }
 
 export default MainPage;
