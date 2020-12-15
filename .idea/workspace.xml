@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc302ed2-fea2-4908-84d7-a11f1161d9b8" name="Default Changelist" comment="feat: Сделать каркас main страницы">
-      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/__text/main-page__text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/__title/main-page__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/main-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/main-page/main-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_active/navBar__button_main-active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_no-active/navBar__button_all-petition-no-active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_no-active/navBar__button_him-petition-no-active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/_no-active/navBar__button_profile-no-active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar/__button/navBar_button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="bc302ed2-fea2-4908-84d7-a11f1161d9b8" name="Default Changelist" comment="feat: Сделать главную страницу&#10;Загрузить иконки навигации">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/MainPage/MainPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/MainPage/MainPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/MainButton/MainButton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/MainButton/MainButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/PetitionButton/PetitionButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main-page/__subtitle/main-page__subtitle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/PetitionButton/PetitionButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar/ProfileButton/ProfileButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/mainPage__image.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607937402895</updated>
-      <workItem from="1607937418479" duration="20673000" />
+      <workItem from="1607937418479" duration="21679000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Сделать каркас main страницы">
       <created>1607955518682</created>
@@ -81,7 +57,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607955518683</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Сделать главную страницу&#10;Загрузить иконки навигации">
+      <created>1607983511100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607983511100</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Сделать каркас main страницы" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Сделать каркас main страницы" />
+    <MESSAGE value="feat: Сделать главную страницу&#10;Загрузить иконки навигации" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Сделать главную страницу&#10;Загрузить иконки навигации" />
   </component>
 </project>
