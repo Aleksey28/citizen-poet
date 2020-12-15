@@ -1,0 +1,13 @@
+.petition-page {
+  padding: 30px 30px 30px 30px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  background-color: #EBEEF3;
+}
