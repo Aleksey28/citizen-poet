@@ -1,14 +1,12 @@
 import './App.css';
-import Header from '../Header/Header';
-import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
+import NavBar from "../NavBar/NavBar";
+import MainPage from "../Main/main-page/main-page";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+    <div className="app">
+      <NavBar />
+      <MainPage />
     </div>
   );
 }
