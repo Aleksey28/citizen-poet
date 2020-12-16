@@ -1,0 +1,6 @@
+.nav__link_active {
+  /*background-image: url('../../../../../img/nav/all-petitions_active.svg');*/
+  background-color: #ebeef3;
+  fill: #ebeef3;
+  stroke: #1A263D;
+}
