@@ -1,21 +1,22 @@
-import './NavBar.css';
-import './__button/navBar_button.css';
-import './__button/_active/navBar__button_main-active.css';
-import './__button/_no-active/navBar__button_all-petition-no-active.css';
-import './__button/_no-active/navBar__button_him-petition-no-active.css';
-import './__button/_no-active/navBar__button_profile-no-active.css';
+import './styles/NavBar.css';
+import {NavLink} from "react-router-dom";
+import React from "react";
+import AllPetitionIcon from "../icons/AllPetitionIcon";
+import MainIcon from "../icons/MainIcon";
+import ProfileIcon from "../icons/ProfileIcon";
 
 const NavBar = () => {
   return (
-    <div className='navBar'>
-      <div>
-        <button className="navBar__button navBar__button_main-active"></button>
-        <button className="navBar__button navBar__button_all-petition-no-active"></button>
-        <button className="navBar__button navBar__button_him-petition-no-active"></button>
-      </div>
-      <div>
-        <button className="navBar__button navBar__button_profile-no-active"></button>
-      </div>
+    <div className='nav'>
+      <NavLink exact to="/" activeClassName="nav__link_active" className="nav__link">
+        <MainIcon  className="nav__icon"/>
+      </NavLink>
+      <NavLink to="/petition" activeClassName="nav__link_active" className="nav__link">
+        <AllPetitionIcon className="nav__icon"/>
+      </NavLink>
+      <NavLink to="/profile" activeClassName="nav__link_active" className="nav__link nav__link_position_bottom">
+        <ProfileIcon  className="nav__icon"/>
+      </NavLink>
     </div>
   )
 }
