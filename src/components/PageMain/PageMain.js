@@ -1,8 +1,8 @@
-import './styles/Main.css';
+import './styles/PageMain.css';
 
 import imageMain from '../../img/mainPage__image.jpg';
 
-const Main = () => {
+const PageMain = () => {
   return (
     <div className="main">
       <div className="main__text">
@@ -40,4 +40,4 @@ const Main = () => {
   );
 }
 
-export default Main;
+export default PageMain;
