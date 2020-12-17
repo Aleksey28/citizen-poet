@@ -3,11 +3,25 @@
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: repeat(6, 16%);
+  grid-template-areas:
+  'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
+  'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
+  'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
+  'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
 
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+
+;
 
   background-color: #EBEEF3;
+}
+
+.show-petiton {
+  box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+  grid-area: showPetition;
+  background-color: green;
+  overflow-y: scroll;
 }

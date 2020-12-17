@@ -1,12 +1,19 @@
 import './petition-page.css';
-import Petition from './__petition/petition-page__petition';
-import Legend from './__legend/petition-page__legend';
+import React from "react";
+import ShowPetitionAll from './show-petition/show-petition';
+import InfoPetition from './info-petition/info-petition';
 
-const PetitionPage = () => {
+const PetitionPage = ({items}) => {
   return (
     <div className="petition-page">
-      <Petition />
-      <Legend />
+      <div className="show-petiton">
+        {
+          items.map(el => {
+            return <ShowPetitionAll items={el}/>
+          })
+        }
+      </div>
+      <InfoPetition />
     </div>
   );
 }
