@@ -6,6 +6,7 @@ import PagePetition from "../PagePetition/PagePetition";
 import {Route, Switch} from 'react-router-dom'
 import React from "react";
 import {useState, useEffect} from "react";
+import PageProfile from "../PageProfile/PageProfile";
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path={'/petition'}>
           <PagePetition listPetition={listPetition}/>
+        </Route>
+        <Route path={'/profile'}>
+          <PageProfile listPetition={listPetition}/>
         </Route>
       </Switch>
     </div>
