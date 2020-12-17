@@ -1,7 +1,7 @@
 import './App.css';
 import dataPet from '../../data/all_pet';
 import NavBar from "../NavBar/NavBar";
-import Main from "../Main/Main";
+import PageMain from "../PageMain/PageMain";
 import PetitionPage from "../petition-page/petition-page";
 import {Route, Switch} from 'react-router-dom'
 import React from "react";
@@ -12,7 +12,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path={'/'}>
-          <Main/>
+          <PageMain/>
         </Route>
         <Route path={'/petition'}>
           <PetitionPage items={dataPet}/>
