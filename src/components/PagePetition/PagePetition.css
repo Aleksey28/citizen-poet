@@ -1,27 +1,24 @@
-.petition-page {
-  padding: 30px 30px 30px 30px;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
+.page-petition {
   display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 30px 30px 30px 30px;
+  background-color: #ebeef3;
   grid-template-rows: repeat(4, 25%);
   grid-template-columns: repeat(6, 16%);
+
   grid-template-areas:
   'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
   'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
   'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
-  'showPetition showPetition infoPetition infoPetition infoPetition infoPetition'
-
-
-;
-
-  background-color: #EBEEF3;
+  'showPetition showPetition infoPetition infoPetition infoPetition infoPetition';
 }
 
 .show-petiton {
+  overflow-y: scroll;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
-  grid-area: showPetition;
   background-color: green;
-  overflow-y: scroll;
+  grid-area: showPetition;
 }

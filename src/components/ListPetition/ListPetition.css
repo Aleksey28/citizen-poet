@@ -1,0 +1,7 @@
+.list-petition {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+  background-color: green;
+  grid-area: showPetition;
+}

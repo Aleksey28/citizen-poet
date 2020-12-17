@@ -1,4 +1,4 @@
-import './info--petition.css';
+import './InfoPetition.css';
 
 const InfoPetition = ({item}) => {
   return (
