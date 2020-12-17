@@ -14,7 +14,7 @@ const NavBar = () => {
       <NavLink to="/petition" activeClassName="nav__link_active" className="nav__link">
         <AllPetitionIcon className="nav__icon"/>
       </NavLink>
-      <NavLink to="/profile" activeClassName="nav__link_active" className="nav__link nav__link_position_bottom">
+      <NavLink to="/profile" activeClassName="nav__link_active" className="nav__link">
         <ProfileIcon  className="nav__icon"/>
       </NavLink>
     </div>
