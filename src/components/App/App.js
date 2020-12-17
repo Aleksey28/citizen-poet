@@ -5,8 +5,16 @@ import PageMain from "../PageMain/PageMain";
 import PagePetition from "../PagePetition/PagePetition";
 import {Route, Switch} from 'react-router-dom'
 import React from "react";
+import {useState, useEffect} from "react";
 
 function App() {
+
+  const [listPetition, setListPetition] = useState([]);
+
+  useEffect(() => {
+    setListPetition(dataPet);
+  }, [])
+
   return (
     <div className="app">
       <NavBar/>
@@ -15,7 +23,7 @@ function App() {
           <PageMain/>
         </Route>
         <Route path={'/petition'}>
-          <PagePetition items={dataPet}/>
+          <PagePetition listPetition={listPetition}/>
         </Route>
       </Switch>
     </div>
