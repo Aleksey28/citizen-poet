@@ -1,0 +1,11 @@
+.item-petition__text {
+  overflow: hidden;
+  height: 120px;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
