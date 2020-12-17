@@ -1,4 +1,8 @@
-.main-page {
+@import url('__text/main__text.css');
+@import url('__title/main__title.css');
+@import url('__subtitle/main__subtitle.css');
+
+.main {
   padding: 30px 30px 30px 30px;
   box-sizing: border-box;
   height: 100%;
