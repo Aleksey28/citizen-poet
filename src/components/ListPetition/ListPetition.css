@@ -1,7 +1,11 @@
 .list-petition {
   overflow-y: scroll;
+  flex: 1 1 auto;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
   background-color: green;
-  grid-area: showPetition;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 340px);
+  gap: 10px;
+  justify-content: center;
 }

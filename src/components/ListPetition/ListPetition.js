@@ -2,12 +2,12 @@ import './ListPetition.css';
 import React from "react";
 import ItemPetition from '../ItemPetition/ItemPetition';
 
-const ListPetition = ({items}) => {
+const ListPetition = ({listPetition, onPetitionClick}) => {
   return (
     <div className="list-petition">
       {
-        items.map(el => {
-          return <ItemPetition items={el}/>
+        listPetition.map(item => {
+          return <ItemPetition item={item} onPetitionClick={onPetitionClick}/>
         })
       }
     </div>

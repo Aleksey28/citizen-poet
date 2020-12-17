@@ -4,13 +4,13 @@
 
 .item-petition {
   box-sizing: border-box;
-  width: 340px;
   max-height: 220px;
   margin: 0 auto 10px;
   padding: 10px 10px 10px 10px;
   color: black;
   border-radius: 10px;
   background-color: white;
+  width: 100%;
 }
 
 .item-petition:hover {
