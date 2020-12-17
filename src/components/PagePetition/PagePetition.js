@@ -15,7 +15,7 @@ const PagePetition = ({listPetition}) => {
   return (
     <div className="page-petition">
       <ListPetition listPetition={listPetition} onPetitionClick={handleClickOnPetition}/>
-      <InfoPetition currentPetition={currentPetition}/>
+      {Object.keys(currentPetition).length > 0 && <InfoPetition currentPetition={currentPetition}/>}
     </div>
   );
 }

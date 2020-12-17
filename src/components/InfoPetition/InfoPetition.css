@@ -1,4 +1,4 @@
 .info-petition {
-  grid-area: infoPetition;
   background-color: aqua;
+  flex: 1 1 865px;
 }
