@@ -1,0 +1,18 @@
+@import url('./__info/item-petition__info.css');
+@import url('./__text/item-petition__text.css');
+@import url('./__title/item-petition__title.css');
+
+.item-petition {
+  box-sizing: border-box;
+  width: 340px;
+  max-height: 220px;
+  margin: 0 auto 10px;
+  padding: 10px 10px 10px 10px;
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.item-petition:hover {
+  opacity: 0.4;
+}
