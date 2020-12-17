@@ -3,7 +3,7 @@ import './__text/main-page__text.css';
 import './__title/main-page__title.css';
 import './__subtitle/main-page__subtitle.css';
 
-import imageMain from '../../../img/mainPage__image.jpg';
+import imageMain from '../../img/mainPage__image.jpg';
 
 const MainPage = () => {
   return (
