@@ -11,6 +11,7 @@
   border-radius: 10px;
   background-color: grey;
   width: 90%;
+  max-width: 229px;
 }
 
 .item-petition:hover {

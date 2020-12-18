@@ -1,0 +1,12 @@
+@import url('./__list/legends__list.css');
+@import url('./__element/legends__element.css');
+@import url('./__text/legends__text.css');
+@import url('./__icon/legends__icon.css');
+
+.legends-petition {
+  margin: 0 30px 35px 0;
+  align-self: flex-end;
+
+  width: 155px;
+  max-height: 280px;
+}
