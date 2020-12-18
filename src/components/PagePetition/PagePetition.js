@@ -1,4 +1,4 @@
-import './PagePetition.css';
+import './__info/page-petition__info.css';
 import React from "react";
 import ListPetition from '../ListPetition/ListPetition';
 import InfoPetition from '../InfoPetition/InfoPetition';
@@ -11,17 +11,34 @@ const PagePetition = ({listPetition}) => {
   const [currentPetition, setCurrentPetition] = useState({});
   const [search, setShowSearch] = useState(true);
   const [legends, setShowLegends] = useState(true);
-
+  const [creatPetition, setShowCreatPetition] = useState(true);
+  const [st, setSt] = useState({
+    display: 'flex',
+    boxSizing: 'border-box',
+    width: '100%',
+    margin: '20px 20px 150px 20px',
+    backgroundColor: '#fff',
+    position: 'relative'
+  })
   const handleClickOnPetition = (data) => {
     setCurrentPetition(data);
     setShowSearch(false);
     setShowLegends(false);
+    setShowCreatPetition(false);
+    setSt({
+      display: 'flex',
+      boxSizing: 'border-box',
+      width: '100%',
+      margin: '20px 20px 20px 20px',
+      backgroundColor: '#fff',
+      position: 'relative'
+    });
   }
 
 
 
   return (
-    <div className="page-petition">
+    <div className="page-petition" style={st}>
       {
           (search && <SearchPetition />)
         }
@@ -31,7 +48,7 @@ const PagePetition = ({listPetition}) => {
 
         {Object.keys(currentPetition).length > 0 && <InfoPetition currentPetition={currentPetition}/>}
         </div>
-        <CreatePetititon />
+        {creatPetition && <CreatePetititon />}
       </div>
   );
 }
