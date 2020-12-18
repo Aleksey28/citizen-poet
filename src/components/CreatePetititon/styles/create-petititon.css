@@ -1,9 +1,12 @@
+@import url('../styles/__title/create-petititon__title.css');
+@import url('../styles/__button/create-petititon__button.css');
+
 .create-petititon {
-  margin: 0 0 -100px 0;
+  margin: 0 0 -120px 0;
   width: 100%;
 
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
   position: absolute;
   bottom: 1px;

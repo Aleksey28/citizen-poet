@@ -1,5 +1,5 @@
 import react from 'react';
-import './create-petititon.css';
+import './styles/create-petititon.css';
 
 class CreatePetititon extends react.Component {
   render() {
