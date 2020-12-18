@@ -5,6 +5,7 @@ import InfoPetition from '../InfoPetition/InfoPetition';
 import {useState} from "react";
 import SearchPetition from '../SearchPetition/SearchPetititon';
 import Legends from '../legend-petition/legends';
+import CreatePetititon from '../CreatePetititon/createPetititon';
 const PagePetition = ({listPetition}) => {
 
   const [currentPetition, setCurrentPetition] = useState({});
@@ -30,8 +31,8 @@ const PagePetition = ({listPetition}) => {
 
         {Object.keys(currentPetition).length > 0 && <InfoPetition currentPetition={currentPetition}/>}
         </div>
+        <CreatePetititon />
       </div>
-
   );
 }
 
