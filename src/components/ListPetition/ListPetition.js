@@ -2,7 +2,7 @@ import './ListPetition.css';
 import React from "react";
 import {useState} from "react";
 import ItemPetition from '../ItemPetition/ItemPetition';
-
+import ActionsListPetition from '../ActionsListPetition/ActionsListPetition';
 
 const ListPetition = ({listPetition, onPetitionClick}) => {
 
@@ -13,7 +13,7 @@ const ListPetition = ({listPetition, onPetitionClick}) => {
   }
   return (
       <div className="list-petition">
-        {(backBlock && <h2>back</h2>)}
+        {(backBlock && <ActionsListPetition/>)}
       {
         listPetition.map(item => {
           return <ItemPetition item={item} onPetitionClick={onPetitionClick} onBackBlock={onBackBlock} />
