@@ -1,4 +1,8 @@
 .info-petition {
-  background-color: aqua;
+  border: 3px black solid;
+  background-color: #EBEEF3;
   flex: 1 1 865px;
+  height: 90%;
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
 }

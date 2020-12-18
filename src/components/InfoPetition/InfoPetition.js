@@ -2,10 +2,10 @@ import './InfoPetition.css';
 
 const InfoPetition = ({currentPetition}) => {
 
-  const {title} = currentPetition;
+  const {author} = currentPetition;
   return (
     <div className="info-petition">
-      <h2>{title}</h2>
+      <h2>{author}</h2>
     </div>
   )
 }
