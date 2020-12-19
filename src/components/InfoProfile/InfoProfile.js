@@ -1,6 +1,6 @@
 import './styles/InfoProfile.css';
 
-const InfoProfile = () => {
+const InfoProfile = ({user}) => {
 
   return (
     <div className="info-profile">

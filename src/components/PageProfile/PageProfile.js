@@ -2,8 +2,9 @@ import './PageProfile.css';
 import React from "react";
 import ListPetition from '../ListPetition/ListPetition';
 import InfoProfile from "../InfoProfile/InfoProfile";
-
-const PageProfile = ({listPetition}) => {
+import user from '../../data/user__prof';
+import userPetition from '../../data/user__pet';
+const PageProfile = () => {
 
   const handleClickOnPetition = (data) => {
     console.log(data);
@@ -11,8 +12,8 @@ const PageProfile = ({listPetition}) => {
 
   return (
     <div className="page-profile">
-      <InfoProfile/>
-      <ListPetition listPetition={listPetition} onPetitionClick={handleClickOnPetition}/>
+      <InfoProfile user={user}/>
+      <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
     </div>
   );
 }
