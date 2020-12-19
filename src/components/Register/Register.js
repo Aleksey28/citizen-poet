@@ -22,7 +22,7 @@ const Register = ({showPage, statusLogIn}) => {
       <input type='text' className='user-logIn-form__input' id='password-reply' placeholder='Повторите Пароль'/>
       <div className='register__action'>
         <button onClick={showPage}>Назад</button>
-        <button onClick={showProfile}>Регестрация</button>
+        <button onClick={showProfile}>Регистрация</button>
       </div>
     </form>
   )

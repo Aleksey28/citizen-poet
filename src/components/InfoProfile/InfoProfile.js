@@ -1,7 +1,10 @@
 import './styles/InfoProfile.css';
 import DefaultIcon from '../icons/profile/DefaultIcon';
 
-const InfoProfile = ({user}) => {
+
+
+
+const InfoProfile = ({user, statusLogIn}) => {
 
   // функция отоброджения аватарки, если null значит дефолтная иконка, если есть дата или url, грузил по ним
   const profileIcon = function(logo) {
@@ -12,6 +15,11 @@ const InfoProfile = ({user}) => {
     };
   }
 
+  // если пользователь нажал выйти, уходим на страницу логина
+  const logOut = () => {
+    statusLogIn(false);
+  }
+
   return (
     <div className="info-profile">
       {
@@ -20,7 +28,7 @@ const InfoProfile = ({user}) => {
       <h2 className="info-profile__name">{user.fullName()}</h2>
       <p className='info-profile__text'>Ваш рейтинг: {user.reiting}</p>
       <p className='info-profile__text'>Создано петиций: {user.petitonCount}</p>
-      <button type='button' className='info-profile__log-out'>Выйти</button>
+      <button type='button' className='info-profile__log-out' onClick={logOut}>Выйти</button>
     </div>
   )
 }

@@ -10,12 +10,14 @@ import {useState} from 'react'
 const PageProfile = () => {
   // use state если false показываем старницу регестрации, если true страницу профиля
   const [statusLogIn, setUserLogIn] = useState(user.statusLogIn);
+  
+
 
   function showMode() {
     if (statusLogIn) {
       return (
       <div className="page-profile">
-        <InfoProfile user={user}/>
+        <InfoProfile user={user} statusLogIn={logIn}/>
         <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
     </div>)
     } else {
