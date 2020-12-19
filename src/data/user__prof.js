@@ -1,8 +1,8 @@
 import userPet from '../data/user__pet';
 
 class UserData {
-  constructor(statusLogIn, logIn, password, name,  soname, lastName, email, age, logo = null,
-     reiting = '0', petitonCount = '0') {
+  constructor(statusLogIn, logIn, password, name,  soname, lastName, email, age, logo,
+     reiting, petitonCount) {
     this.statusLogIn = statusLogIn;
     this.logIn = logIn;
     this.password = password;
