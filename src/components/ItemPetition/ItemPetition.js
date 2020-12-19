@@ -1,9 +1,10 @@
 import './styles/ItemPetition.css';
 
-const ItemPetition = ({item, onPetitionClick}) => {
+const ItemPetition = ({item, onPetitionClick, onBackBlock}) => {
 
   const handleClickPetition = () => {
     onPetitionClick(item);
+    onBackBlock();
   }
 
   return (

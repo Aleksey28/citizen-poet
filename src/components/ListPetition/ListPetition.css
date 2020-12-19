@@ -2,10 +2,14 @@
   overflow-y: scroll;
   flex: 1 1 auto;
   box-sizing: border-box;
-  padding: 10px 10px 10px 10px;
-  background-color: green;
+  margin: 40px 10px 10px 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 340px);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, 330px);
+  align-items: center;
+  align-content: flex-start;
   justify-content: center;
+  justify-items: last baseline;
+  gap: 10px;
+  height: 80%;
+  max-width: 80%;
 }

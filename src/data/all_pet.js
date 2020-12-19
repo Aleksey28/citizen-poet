@@ -13,14 +13,14 @@ const ind = [
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Vasy'
+    author: 'Ваня'
   }, {
     id: 3,
     title: 'title3',
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Vasy'
+    author: 'Петя'
   },
   {
     id: 4,
@@ -28,7 +28,7 @@ const ind = [
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Vasy'
+    author: 'Костя'
   }
 ]
 
