@@ -19,7 +19,7 @@ const PageProfile = () => {
         <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
     </div>)
     } else {
-      return (<Register />)
+      return (<Register  status={logIn}/>)
     }
   }
 
