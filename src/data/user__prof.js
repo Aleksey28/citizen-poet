@@ -1,7 +1,8 @@
 import userPet from '../data/user__pet';
 
 class UserData {
-  constructor(logIn, password, name, soname, lastName, age, logo, reiting, petitonCount) {
+  constructor(statusLogIn, logIn, password, name, soname, lastName, age, logo, reiting, petitonCount) {
+    this.statusLogIn = statusLogIn;
     this.logIn = logIn;
     this.password = password;
     this.name = name;
@@ -21,5 +22,5 @@ class UserData {
 
 
 
-const user = new UserData(null, null, 'Ivan', 'Ivanov', 'Ivanich', '14.04.1999', null, '4', userPet.length);
+const user = new UserData(false, '123', '123', 'Ivan', 'Ivanov', 'Ivanich', '14.04.1999', null, '4', userPet.length);
 export default user;
