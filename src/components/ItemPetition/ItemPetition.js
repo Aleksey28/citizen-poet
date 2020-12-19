@@ -6,7 +6,7 @@ const ItemPetition = ({item, onPetitionClick, onBackBlock}) => {
     onPetitionClick(item);
     onBackBlock();
   }
-
+ 
   return (
     <div className='item-petition' onClick={handleClickPetition}>
       <h2 className='item-petition__title'>{item.title}</h2>

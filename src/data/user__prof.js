@@ -25,6 +25,6 @@ class UserData {
 
 
 const user = new UserData(false, '123', '123', 'Ivan', 'Ivanov', 'Ivanich', 'abra@abra.ri',
- '14.04.1999', null, '4', userPet.length);
+ '14.04.1999', null, '4', (userPet !== null ? userPet.length : 0));
 
 export default user;

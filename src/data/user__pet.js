@@ -24,5 +24,5 @@
 //     author: 'Vasy'
 //   }
 // ];
-const userPetititon =[{}];
+const userPetititon = null;
 export default userPetititon;
