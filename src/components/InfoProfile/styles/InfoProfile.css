@@ -1,0 +1,12 @@
+@import url('./__avatar/info-profile__avatar.css');
+@import url('./__name/info-profile__name.css');
+
+.info-profile {
+  background-color: aqua;
+  flex: 0 1 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 43px;
+  box-sizing: border-box;
+}
