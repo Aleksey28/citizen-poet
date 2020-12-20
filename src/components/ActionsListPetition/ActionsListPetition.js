@@ -1,6 +1,7 @@
 import react from 'react';
 import './styles/ActionsListPetition.css'
 import BackButton from '../icons/ActiveList__back-btn'
+
 class ActionsListPetition extends react.Component {
   render() {
     return (
