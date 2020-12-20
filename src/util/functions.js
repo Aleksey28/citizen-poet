@@ -19,40 +19,54 @@
 // }
 
 function translateToPoem(str, poems) {
-  const strArray = str.split(/[^а-яa-z]/gim);
 
-  const mapWeights = new Map();
-  const mapValues = new Map();
+  const maxCountWords = 8;
+  const fullStrArray = str.split(/[^а-яa-z]/gim);
+  const countSets = Math.ceil(fullStrArray.length / maxCountWords);
 
-  let result;
-  strArray.forEach(item => {
+  let returnValue = '';
 
-    if (item.length > 3) {
-      const endingLength = Math.ceil(Math.floor(item.length / 2)/2);
+  for (let i = 0; i < countSets; i++) {
 
-      const reg = new RegExp(`.*${item.slice(0, item.length-endingLength)}.*`, 'gim')
+    const mapWeights = new Map();
+    const mapValues = new Map();
+    const indexFirstItem = i * maxCountWords;
+    const strArray = fullStrArray.slice(indexFirstItem, Math.min((indexFirstItem + maxCountWords), fullStrArray.length));
 
+    strArray.forEach(item => {
 
-      while ((result = reg.exec(poems))) {
-        if (mapWeights.has(result.index)) {
-          mapWeights.set(result.index, mapWeights.get(result.index) + 1);
-        } else {
-          mapWeights.set(result.index, 1);
-          mapValues.set(result.index, result[0]);
+      if (item.length > 3) {
+        const endingLength = Math.ceil(Math.floor(item.length / 2) / 2);
+
+        const reg = new RegExp(`.*${item.slice(0, item.length - endingLength)}.*`, 'gim')
+
+        let result;
+        while ((result = reg.exec(poems))) {
+          if (mapWeights.has(result.index)) {
+            mapWeights.set(result.index, mapWeights.get(result.index) + 1);
+          } else {
+            mapWeights.set(result.index, 1);
+            mapValues.set(result.index, result[0]);
+          }
         }
       }
+    })
+
+    const sortedMapWeights = new Map([...mapWeights.entries()].sort((a, b) => b[1] - a[1]));
+
+    let topKey = 0;
+    for (let key of sortedMapWeights.keys()) {
+      topKey = key;
+      break;
     }
-  })
 
-  const sortedMapWeights = new Map([...mapWeights.entries()].sort((a, b) => b[1] - a[1]));
-
-  let topKey = 0;
-  for (let key of sortedMapWeights.keys()) {
-    topKey = key;
-    break;
+    if (mapValues.size > 0) {
+      returnValue += mapValues.get(topKey) + (i !== countSets - 1 ? '\n' : '');
+    }
   }
 
-  return mapValues.size > 0 ? mapValues.get(topKey) : '';
+
+  return returnValue.length > 0 ? returnValue : 'Стих не найден =(';
 }
 
 
