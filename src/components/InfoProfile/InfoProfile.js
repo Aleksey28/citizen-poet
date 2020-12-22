@@ -18,8 +18,8 @@ const InfoProfile = ({user, statusLogIn}) => {
   // если пользователь нажал выйти, уходим на страницу логина
   const logOut = () => {
     const storage = window.localStorage;
-    storage.setItem('log', false)
-    console.log(typeof(storage.getItem('log')))
+    storage.setItem('log', 'false')
+    console.log((!storage.getItem('log')))
     statusLogIn(false);
   }
 

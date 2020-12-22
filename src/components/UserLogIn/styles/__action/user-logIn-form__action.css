@@ -1,0 +1,7 @@
+.user-logIn-form__action {
+  margin: 0 auto 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

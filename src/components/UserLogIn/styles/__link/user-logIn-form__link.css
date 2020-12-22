@@ -1,0 +1,10 @@
+.user-logIn-form__link {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-decoration: underline;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+}

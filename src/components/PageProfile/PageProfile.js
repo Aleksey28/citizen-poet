@@ -8,9 +8,12 @@ import UserLogIn from '../UserLogIn/UserLogIn';
 import {useState} from 'react'
 
 const PageProfile = () => {
+
+  // получение доступа к локальному хранилищу
   const storage = window.localStorage;
+  const userStatus = storage.getItem('log')
   // use state если false показываем старницу регестрации, если true страницу профиля
-  const [statusLogIn, setUserLogIn] = useState(!!storage.getItem('log'));
+  const [statusLogIn, setUserLogIn] = useState(!userStatus);
   
 
  
