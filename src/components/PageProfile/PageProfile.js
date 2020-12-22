@@ -8,14 +8,19 @@ import UserLogIn from '../UserLogIn/UserLogIn';
 import {useState} from 'react'
 
 const PageProfile = () => {
+
+  // получение доступа к локальному хранилищу
+  const storage = window.localStorage;
+  const userStatus = storage.getItem('log')
   // use state если false показываем старницу регестрации, если true страницу профиля
-  const [statusLogIn, setUserLogIn] = useState(user.statusLogIn);
+  const [statusLogIn, setUserLogIn] = useState(!userStatus);
   
 
  
 
   function showMode() {
     if (statusLogIn) {
+      console.log(statusLogIn)
       return (
       <div className="page-profile">
         <InfoProfile user={user} statusLogIn={logIn}/>
