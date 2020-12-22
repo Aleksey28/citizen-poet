@@ -1,51 +1,54 @@
 import './styles/register.css'
 import userData from '../../data/user__prof';
+import userPet from '../../data/user__pet';
 const Register = ({showPage, statusLogIn}) => {
 
-  // валидация и отображение что не введно при регестрации
-  const validateRegister = () => {
-    const name = document.getElementById('name');
-    const lastName = document.getElementById('lastName');
-    const soname = document.getElementById('soname');
-    const email = document.getElementById('email');
-    const age = document.getElementById('age');
-    const logIn = document.getElementById('log-in');
-    const password = document.getElementById('password');
-    const passwordReply = document.getElementById('password-reply');
-    const allInput = document.querySelectorAll('.user-logIn-form__input');
-    
-    const inputValue = () => {
-      let clearInput = true;
-      allInput.forEach(element => {
-        if (!element.value) {
-          element.style.border = '1px red solid';
-          element.style.color = 'red';
-          clearInput = false;
-        } else {
-          element.style.border = '1px black solid';
-          element.style.color = 'black';
+    const name = document.getElementById('name'),
+          lastName = document.getElementById('lastName'),
+          soname = document.getElementById('soname'),
+          email = document.getElementById('email'),
+          age = document.getElementById('age'),
+          logIn = document.getElementById('log-in'),
+          password = document.getElementById('password'),
+          passwordReply = document.getElementById('password-reply'),
+          allInput = document.querySelectorAll('.user-logIn-form__input'),
+          storage = window.localStorage;
+
+    const validateRegister = () => {
+      const validate = new Promise( (res, rej) => {
+        let clearInpout = 0;
+
+        allInput.forEach(el => {
+
+          if (el.value) {
+            el.style.border = '1px black solid'
+            clearInpout++
+          } else {
+            el.style.border = '1px red solid'
+            clearInpout--
+          }
+        })
+
+        if (clearInpout === 8) {
+          res();
         }
       })
-      return clearInput;
-    };
 
-    if (inputValue && (password.value === passwordReply.value)) {
-      userData.name = name.value;
-      userData.lastName = lastName.value;
-      userData.soname = soname.value;
-      userData.email = email.value;
-      userData.age = age.value;
-      userData.logIn = logIn.value;
-      userData.password = password.value;
-      userData.petitonCount = '0';
-      userData.reiting = '0';
-      userData.logo = null;
-      statusLogIn(true);
-    } else {
-      password.value ='';
-      passwordReply.value ='';
-    }
-  }
+      validate.then(() => {
+        userData.name = name.value
+        userData.soname = soname.value
+        userData.lastName = lastName.value
+        userData.email = email.value
+        userData.age = age.value
+        userData.logIn = logIn.value
+        userData.password = password.value
+        userData.reiting = '0'
+        userData.petition = userPet.length
+
+        statusLogIn(true)
+      })
+      storage.setItem('log', true)
+      }
 
   return (
     <form className='register'>
