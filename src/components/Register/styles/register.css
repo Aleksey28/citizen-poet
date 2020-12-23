@@ -1,10 +1,20 @@
+@import url('./__title/register__title.css');
+@import url('./__input/register-form__input.css');
+@import url('./__button/register__button.css');
 .register {
-  margin: 140px auto;
-  border: 1px black solid;
+  margin: auto;
+  padding: 29px 0 30px 0;
+  box-sizing: border-box;
+
+  max-width: 714px;
+  height: 551px;
+
+  background-color: #FFFFFF;
+  border-radius: 7px;
+
   flex: 1 1 auto;
-  max-height: 380px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
