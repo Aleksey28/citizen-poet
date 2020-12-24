@@ -11,7 +11,7 @@ const ListPetition = ({listPetition, onPetitionClick}) => {
 
   const onBackBlock = () => {
     setBackBlock(true);
-  }
+  };
 
   const seeMode = () => {
     if (setListPet) {
@@ -20,10 +20,10 @@ const ListPetition = ({listPetition, onPetitionClick}) => {
           listPetition.map(item => {
             return <ItemPetition item={item} onPetitionClick={onPetitionClick} onBackBlock={onBackBlock} />
           })
-        
-      )
-    } else { 
-      return (<h2>Нет петиций(</h2>)
+
+      );
+    } else {
+      return (<h2> Нет петиций </h2>)
     }
   }
 

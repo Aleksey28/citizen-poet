@@ -17,7 +17,7 @@ const PagePetition = ({listPetition}) => {
     boxSizing: 'border-box',
     width: '100%',
     margin: '20px 20px 150px 20px',
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(0, 0, 0, 0)',
     position: 'relative'
   })
   const handleClickOnPetition = (data) => {
@@ -30,7 +30,7 @@ const PagePetition = ({listPetition}) => {
       boxSizing: 'border-box',
       width: '100%',
       margin: '20px 20px 20px 20px',
-      backgroundColor: '#fff',
+      backgroundColor: 'rgba(0, 0, 0, 0)',
       position: 'relative'
     });
   }
