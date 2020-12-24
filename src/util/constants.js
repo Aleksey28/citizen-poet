@@ -46,4 +46,11 @@ const categories = [
   },
 ]
 
-export {categories};
+const apiSettings = {
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-16',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+};
+
+export {categories, apiSettings};
