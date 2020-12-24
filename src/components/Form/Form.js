@@ -1,4 +1,4 @@
-import {useState, createContext, useContext, useEffect} from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
 
 //Создаем контекст для вложенных компонентов формы
 const FormContext = createContext({});
@@ -73,6 +73,7 @@ export function Field({children, name}) {
 
   //Определяем стейт значения поля
   const [value, setValue] = useState(defaultValue);
+  const [showError, setShowError] = useState(false);
 
   useEffect(() => {
     setValue(defaultValue);
@@ -82,6 +83,7 @@ export function Field({children, name}) {
   //Установка значения в значения формы
   useEffect(() => {
     onChangeInput(name, value);
+    setShowError(defaultValue!==value && formErrors[name]);
   }, [name, value, onChangeInput]);
 
   return children({
@@ -89,6 +91,7 @@ export function Field({children, name}) {
     value,
     onChange: setValue,
     errors: formErrors[name],
+    showError
   });
 }
 
