@@ -1,15 +1,13 @@
 .create-petititon__button {
   width: 425px;
-  height: 90px;
-  left: 934px;
-  top: 881px;
+  height: 50px;
   
-  background: #D87648;
+  background-color: #D87648;
   border-radius: 8px;
   border: none;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
   line-height: 33px;
-  color: #FFFFFF;
+  color: #fff;
 }

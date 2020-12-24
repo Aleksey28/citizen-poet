@@ -8,7 +8,7 @@ import LineViewMode from '../icons/LineViewMode';
 class SearchPetition extends react.Component {
   constructor(props) {
     super(props);
-    this.state = {isToogle: true}
+    this.state = { isToogle: true }
 
     this.activeBtnOne = this.activeBtnOne.bind(this);
 
@@ -24,12 +24,10 @@ class SearchPetition extends react.Component {
   render() {
       return (
         <div className='search-petition'>
-           <input placeholder='Поиск...' type='text' name='search__input-petition' className='search__input-petition '></input>
-          <div className='search__button'>
-            <button className='search__link' onClick={this.activeBtnOne}>
-              {this.state.isToogle ? <CardViewMode className='search__icon'/> : <LineViewMode className='search__icon'/>}
-            </button>
-          </div>
+          <input placeholder='Поиск...' type='text' name='search__input-petition' className='search__input-petition '/>
+          <button className='search__link' onClick={this.activeBtnOne}>
+            {this.state.isToogle ? <CardViewMode className='search__icon'/> : <LineViewMode className='search__icon'/>}
+          </button>
         </div>
       );
   }
