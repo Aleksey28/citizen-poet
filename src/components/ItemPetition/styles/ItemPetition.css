@@ -1,19 +1,16 @@
+@import url('./__logo/item-petition__logo.css');
 @import url('./__info/item-petition__info.css');
-@import url('./__text/item-petition__text.css');
 @import url('./__title/item-petition__title.css');
+@import url('./__types/item-petition__types.css');
+@import url('./__circle/item-petition__circle.css');
+@import url('./__text/item-petition__text.css');
+@import url('./__button/info-petition__button.css');
 
 .item-petition {
   box-sizing: border-box;
-  max-height: 220px;
-  margin: 10px auto 10px;
-  padding: 10px 10px 10px 10px;
+  height: 316px;
   color: black;
   border-radius: 10px;
-  background-color: grey;
-  width: 90%;
-  max-width: 320px;
+  background-color: #fff;
 }
 
-.item-petition:hover {
-  opacity: 0.4;
-}
