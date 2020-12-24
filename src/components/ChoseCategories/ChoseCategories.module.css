@@ -40,6 +40,7 @@
   list-style-type: none;
   grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
   gap: 40px;
+  padding: 0;
 }
 
 .buttons {

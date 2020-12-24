@@ -45,7 +45,7 @@ const getErrorMessage = (typeOfError, value = '') => {
   return errorMessage;
 };
 
-const PageNewPetition = ({poemsText, onBack, onContinue, onAddData}) => {
+const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData}) => {
 
   //Стейт всех значений формы
   const [formValues, setFormValues] = useState({});
@@ -73,9 +73,9 @@ const PageNewPetition = ({poemsText, onBack, onContinue, onAddData}) => {
       onChangeInput={onChangeInput}
       formValues={formValues}
       defaultValues={{
-        name: "",
-        to: "",
-        description: ""
+        name: defaultValue.name,
+        to: defaultValue.to,
+        description: defaultValue.description
       }}
     >
       <fieldset className={classes.fieldset}>
