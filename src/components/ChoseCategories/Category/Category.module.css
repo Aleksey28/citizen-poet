@@ -1,0 +1,27 @@
+.item {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+}
+
+.itemCircle {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.itemCircle_active {
+  box-shadow: 0 0 4px 4px #d87648 ;
+}
+
+.itemName {
+  margin: 0;
+}

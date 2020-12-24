@@ -1,4 +1,5 @@
 .button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 28px;
   font-weight: normal;
   font-style: normal;
@@ -8,9 +9,16 @@
   color: #fff;
   border: none;
   border-radius: 8px;
-  background: #BBC5C9;
+  background: #bbc5c9;
 }
 
 .button_main {
-  background: #D87648;
+  background: #d87648;
+}
+
+.button:disabled {
+  user-select: none;
+  pointer-events: none;
+  color: rgba(16, 16, 16, 0.3);
+  background-color: rgba(239, 239, 239, 0.3);
 }
