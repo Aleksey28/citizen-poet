@@ -3,34 +3,33 @@ import React from "react";
 import ListPetition from '../ListPetition/ListPetition';
 import InfoPetition from '../InfoPetition/InfoPetition';
 import {useState} from "react";
-import SearchPetition from '../SearchPetition/SearchPetititon';
+import SearchPetition from '../SearchPetition/SearchPetition';
 import Legends from '../legend-petition/legends';
-import CreatePetititon from '../CreatePetititon/createPetititon';
+import CreatePetition from '../CreatePetititon/createPetition';
 
 const PagePetition = ({ listPetition }) => {
 
+  // следим за изменением активной петиции
   const [currentPetition, setCurrentPetition] = useState({});
-  const [legends, setShowLegends] = useState(true);
-  const [creatPetition, setShowCreatPetition] = useState(true);
-
-  const handleClickOnPetition = (data) => {
+  // скрываем лист петиций при переходе на петицию
+  const [showListPet, setShowListPet] = useState(true);
+  // передаем в компоненту петиций data - петиции
+  const handleClickOnPetition = ( data ) => {
     setCurrentPetition(data);
-    setShowLegends(false);
-    setShowCreatPetition(false);
-  }
+    setShowListPet(false);
+  };
 
   return (
     <div className="page-petition">
       <SearchPetition />
 
       <div className='page-petition__info'>
-        <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/>
-        {legends && <Legends />}
+        {showListPet && <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/> }
 
-        {Object.keys(currentPetition).length > 0 && <InfoPetition currentPetition={ currentPetition }/>}
+        {!showListPet && <InfoPetition currentPetition={ currentPetition }/>}
       </div>
-
-      {creatPetition && <CreatePetititon />}
+      <Legends />
+      <CreatePetition />
     </div>
   );
 }

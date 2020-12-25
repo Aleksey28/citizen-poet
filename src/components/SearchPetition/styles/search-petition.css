@@ -9,4 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  grid-row: 1;
+  grid-column: 1 / span 4;
 }
