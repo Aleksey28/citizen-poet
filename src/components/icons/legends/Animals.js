@@ -1,0 +1,1 @@
+import React from 'react';function Animals(props) {  return (    <svg      width="1em"      height="1em"      viewBox="0 0 18 19"      fill="none"      xmlns="http://www.w3.org/2000/svg"      {...props}    >      <circle cx={9} cy={9.012} r={9} fill="#C7A8A6" />    </svg>  )}export default Animals

@@ -1,10 +1,14 @@
 import "./styles/ItemPetition.css";
 import defaultLogo from '../../img/card__logo.png';
-import OrangeCircle from '../icons/legends/OrangeCircle';
-import YellowCircle from '../icons/legends/YellowCircle';
-import DarkBlueCircle from '../icons/legends/DarkBlueCircle';
-import LightGreyCircle from '../icons/legends/LightGreyCircle';
-import MIddleGreenCircle from '../icons/legends/MIddleGreenCircle';
+import Animals from '../icons/legends/Animals';
+import Children from '../icons/legends/Children';
+import CityHall from '../icons/legends/CityHall';
+import HeatingSystem from '../icons/legends/HeatingSystem';
+import JKH from '../icons/legends/JKH';
+import Neighbors from '../icons/legends/Neighbors';
+import Park from '../icons/legends/Park';
+import Parking from '../icons/legends/Parking';
+import President from '../icons/legends/President';
 import SharePetition from '../icons/card__pet/Share';
 import LikePetition from '../icons/card__pet/Like';
 
@@ -20,9 +24,9 @@ const ItemPetition = ({ item, onPetitionClick, onBackBlock }) => {
       <div className="item-petition__info">
         <h2 className="item-petition__title">{item.title}</h2>
           <div className="item-petition__types">
-            <OrangeCircle className="item-petition__circle"/>
-            <YellowCircle  className="item-petition__circle"/>
-            <DarkBlueCircle  className="item-petition__circle"/>
+            <Animals className="item-petition__circle"/>
+            <Park  className="item-petition__circle"/>
+            <JKH  className="item-petition__circle"/>
           </div>
       </div>
       <p className="item-petition__text">{item.text}</p>

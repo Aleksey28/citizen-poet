@@ -1,6 +1,8 @@
 .page-petition__info {
   display: flex;
   align-items: center;
+  justify-items: center;
   justify-content: space-between;
+  align-content: center;
   width: 100%;
 }
