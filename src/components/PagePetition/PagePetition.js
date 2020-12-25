@@ -6,7 +6,8 @@ import {useState} from "react";
 import SearchPetition from '../SearchPetition/SearchPetititon';
 import Legends from '../legend-petition/legends';
 import CreatePetititon from '../CreatePetititon/createPetititon';
-const PagePetition = ({listPetition}) => {
+
+const PagePetition = ({ listPetition }) => {
 
   const [currentPetition, setCurrentPetition] = useState({});
   const [legends, setShowLegends] = useState(true);
@@ -18,20 +19,19 @@ const PagePetition = ({listPetition}) => {
     setShowCreatPetition(false);
   }
 
-
-
   return (
     <div className="page-petition">
       <SearchPetition />
 
       <div className='page-petition__info'>
-        <ListPetition listPetition={listPetition} onPetitionClick={handleClickOnPetition}/>
+        <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/>
         {legends && <Legends />}
 
-        {Object.keys(currentPetition).length > 0 && <InfoPetition currentPetition={currentPetition}/>}
-        </div>
-        {creatPetition && <CreatePetititon />}
+        {Object.keys(currentPetition).length > 0 && <InfoPetition currentPetition={ currentPetition }/>}
       </div>
+
+      {creatPetition && <CreatePetititon />}
+    </div>
   );
 }
 

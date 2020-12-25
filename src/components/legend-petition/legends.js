@@ -1,10 +1,15 @@
 import react from 'react';
 import './styles/legends.css';
-import OrangeCircle from '../icons/legends/OrangeCircle';
-import YellowCircle from '../icons/legends/YellowCircle';
-import DarkBlueCircle from '../icons/legends/DarkBlueCircle';
-import LightGreyCircle from '../icons/legends/LightGreyCircle';
-import MIddleGreenCircle from '../icons/legends/MIddleGreenCircle';
+import Animals from '../icons/legends/Animals';
+import Children from '../icons/legends/Children';
+import CityHall from '../icons/legends/CityHall';
+import HeatingSystem from '../icons/legends/HeatingSystem';
+import JKH from '../icons/legends/JKH';
+import Neighbors from '../icons/legends/Neighbors';
+import Park from '../icons/legends/Park';
+import Parking from '../icons/legends/Parking';
+import President from '../icons/legends/President';
+
 
 class Legend extends react.Component {
   
@@ -13,25 +18,50 @@ class Legend extends react.Component {
     return (
       <div className='legends-petition'>
         <ul className='legends__list'>
+
           <li className='legends__element'> 
-            <OrangeCircle className='legends__icon' />
+            <JKH className='legends__icon' />
             <p className='legends__text'>ЖКХ</p>
           </li>
+
           <li className='legends__element'> 
-            <YellowCircle className='legends__icon'/>
+            <Parking className='legends__icon'/>
+            <p className='legends__text'>Парковока</p>
+          </li>
+
+          <li className='legends__element'> 
+            <Park className='legends__icon'/>
+            <p className='legends__text'>Парки</p>
+          </li>
+
+          <li className='legends__element'> 
+            <HeatingSystem className='legends__icon' />
             <p className='legends__text'>Теплосеть</p>
           </li>
+
           <li className='legends__element'> 
-            <DarkBlueCircle className='legends__icon'/>
-            <p className='legends__text'>Мерия</p>
+            <CityHall className='legends__icon'/>
+            <p className='legends__text'>Мэрия</p>
           </li>
-          <li className='legends__element'> 
-            <LightGreyCircle className='legends__icon' />
+
+          <li className='legends__element'>
+            <President className='legends__icon'/>
             <p className='legends__text'>Президент</p>
           </li>
-          <li className='legends__element'> 
-            <MIddleGreenCircle className='legends__icon'/>
+
+          <li className='legends__element'>
+            <Neighbors className='legends__icon'/>
             <p className='legends__text'>Соседи</p>
+          </li>
+
+          <li className='legends__element'>
+            <Animals className='legends__icon'/>
+            <p className='legends__text'>Животные</p>
+          </li>
+
+          <li className='legends__element'>
+            <Children className='legends__icon'/>
+            <p className='legends__text'>Дети</p>
           </li>
         </ul>
       </div>
