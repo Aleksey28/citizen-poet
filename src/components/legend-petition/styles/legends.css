@@ -6,4 +6,6 @@
 .legends-petition {
   margin: 0 auto;
   flex: 1 1 auto;
+  width: 120px;
+  height: 328px;
 }

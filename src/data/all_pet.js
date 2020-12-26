@@ -10,7 +10,7 @@ const ind = [
   {
     id: 2,
     title: 'title2',
-    text: 'text',
+    text: 'texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext',
     comments: [],
     like: 0,
     author: 'Ваня',

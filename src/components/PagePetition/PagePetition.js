@@ -26,10 +26,10 @@ const PagePetition = ({ listPetition }) => {
 
   return (
     <div className="page-petition">
-      <SearchPetition />
+      { showLegends && <SearchPetition/> }
 
       <div className="page-petition__info">
-        <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/>
+        { showLegends && <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/> }
 
         { !showLegends && <InfoPetition currentPetition={ currentPetition }  onBackCLick={ handleClickBack }/> }
         { showLegends && <Legends/> }
