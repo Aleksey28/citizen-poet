@@ -4,8 +4,7 @@
 @import url('./__icon/legends__icon.css');
 
 .legends-petition {
-  margin: 0 30px 35px 0;
-  align-self: center;
-  flex: 1 1 155px;
-  max-height: 280px;
+  margin: 0 auto;
+  grid-row: 4 / span 8;
+  grid-column: 4;
 }

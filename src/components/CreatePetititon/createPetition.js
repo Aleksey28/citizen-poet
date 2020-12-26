@@ -1,15 +1,15 @@
 import React from 'react';
-import './styles/create-petititon.css';
+import './styles/create-petition.css';
 import {Link} from "react-router-dom";
 
-function CreatePetititon() {
+function CreatePetition() {
   return (
-    <div className='create-petititon'>
-      <p className='create-petititon__title'>
+    <div className='create-petition'>
+      <p className='create-petition__title'>
         Не нашли подходящей петиции? Создайте свою!
       </p>
       <Link to={'/new-petition'}>
-        <button className="create-petititon__button">
+        <button className="create-petition__button">
           Создать новую петицию
         </button>
       </Link>
@@ -18,4 +18,4 @@ function CreatePetititon() {
 
 }
 
-export default CreatePetititon;
+export default CreatePetition;
