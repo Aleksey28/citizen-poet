@@ -1,24 +1,42 @@
 .button {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: normal;
   font-style: normal;
-  line-height: 33px;
-  padding: 28px 60px;
+  line-height: 28px;
+  padding: 24px;
   cursor: pointer;
-  color: #fff;
+  color: #1a263d;
   border: none;
   border-radius: 8px;
+  outline: none;
   background: #bbc5c9;
 }
 
+.button:hover {
+  background: #6792a4;
+}
+
+.button:active {
+  background: #c4521c;
+}
+
 .button_main {
+  color: #fff;
   background: #d87648;
+}
+
+.button_main:hover {
+  background: #fcbb6b;
+}
+
+.button_main:active {
+  background: #C4521C;
 }
 
 .button:disabled {
   user-select: none;
   pointer-events: none;
-  color: rgba(16, 16, 16, 0.3);
-  background-color: rgba(239, 239, 239, 0.3);
+  color: #d5d6d8;
+  background: #ebeef3;
 }
