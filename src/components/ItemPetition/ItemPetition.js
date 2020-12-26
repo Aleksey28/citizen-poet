@@ -12,10 +12,9 @@ import President from '../icons/legends/President';
 import SharePetition from '../icons/card__pet/Share';
 import LikePetition from '../icons/card__pet/Like';
 
-const ItemPetition = ({ item, onPetitionClick, onBackBlock }) => {
+const ItemPetition = ({ item, onPetitionClick }) => {
   const handleClickPetition = () => {
     onPetitionClick(item);
-    onBackBlock();
   };
 
   return (
@@ -24,9 +23,7 @@ const ItemPetition = ({ item, onPetitionClick, onBackBlock }) => {
       <div className="item-petition__info">
         <h2 className="item-petition__title">{item.title}</h2>
           <div className="item-petition__types">
-            <Animals className="item-petition__circle"/>
-            <Park  className="item-petition__circle"/>
-            <JKH  className="item-petition__circle"/>
+            <Parking className="item-petition__circle"/>
           </div>
       </div>
       <p className="item-petition__text">{item.text}</p>

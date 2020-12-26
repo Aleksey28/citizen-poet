@@ -5,7 +5,7 @@ const ind = [
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Vasy'
+    author: 'Василий',
   },
   {
     id: 2,
@@ -13,14 +13,14 @@ const ind = [
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Ваня'
+    author: 'Ваня',
   }, {
     id: 3,
     title: 'title3',
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Петя'
+    author: 'Петя',
   },
   {
     id: 4,
@@ -28,8 +28,8 @@ const ind = [
     text: 'text',
     comments: [],
     like: 0,
-    author: 'Костя'
-  }
-]
+    author: 'Костя',
+  },
+];
 
 export default ind;

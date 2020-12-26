@@ -11,24 +11,30 @@ const PagePetition = ({ listPetition }) => {
 
   // следим за изменением активной петиции
   const [currentPetition, setCurrentPetition] = useState({});
-  // скрываем лист петиций при переходе на петицию
-  const [showListPet, setShowListPet] = useState(true);
+  // скрываем легенду при переходе на петицию
+  const [showLegends, setShowLegends] = useState(true);
   // передаем в компоненту петиций data - петиции
+
   const handleClickOnPetition = ( data ) => {
     setCurrentPetition(data);
-    setShowListPet(false);
+    setShowLegends(false);
   };
+
+  const handleClickBack = () => {
+    setShowLegends(true);
+  }
 
   return (
     <div className="page-petition">
       <SearchPetition />
 
-      <div className='page-petition__info'>
-        {showListPet && <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/> }
+      <div className="page-petition__info">
+        <ListPetition listPetition={ listPetition } onPetitionClick={ handleClickOnPetition }/>
 
-        {!showListPet && <InfoPetition currentPetition={ currentPetition }/>}
+        { !showLegends && <InfoPetition currentPetition={ currentPetition }  onBackCLick={ handleClickBack }/> }
+        { showLegends && <Legends/> }
       </div>
-      <Legends />
+
       <CreatePetition />
     </div>
   );
