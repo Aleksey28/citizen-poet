@@ -1,0 +1,1 @@
+.header__back-button {  margin: 0;  display: flex;  flex-flow: row nowrap;  justify-content: center;  align-items: center;  width: 80px;  height: 25px;  align-self: center;  background-color: #D87648;  border-radius: 8px;  border: none;  font-style: normal;  font-weight: normal;  font-size: 18px;  line-height: 33px;  text-align: center;  color: #fff;}

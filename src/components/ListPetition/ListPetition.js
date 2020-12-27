@@ -1,24 +1,19 @@
 import './ListPetition.css';
 import React from "react";
-import {useState} from "react";
 import ItemPetition from '../ItemPetition/ItemPetition';
-import ActionsListPetition from '../ActionsListPetition/ActionsListPetition';
 
 const ListPetition = ({listPetition, onPetitionClick}) => {
 
-  const [backBlock, setBackBlock] = useState(false);
   const setListPet = (listPetition !== null) ? true : false;
 
-  const onBackBlock = () => {
-    setBackBlock(true);
-  };
+
 
   const seeMode = () => {
     if (setListPet) {
       return (
 
           listPetition.map(item => {
-            return <ItemPetition item={item} onPetitionClick={onPetitionClick} onBackBlock={onBackBlock} />
+            return <ItemPetition item={item} onPetitionClick={onPetitionClick}  />
           })
 
       );
@@ -29,7 +24,6 @@ const ListPetition = ({listPetition, onPetitionClick}) => {
 
   return (
       <div className="list-petition">
-        {(backBlock && <ActionsListPetition/>)}
        { seeMode()}
     </div>
   );

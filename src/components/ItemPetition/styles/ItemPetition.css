@@ -5,12 +5,16 @@
 @import url('./__circle/item-petition__circle.css');
 @import url('./__text/item-petition__text.css');
 @import url('./__button/info-petition__button.css');
+@import url('./__author/item-petition__author.css');
 
 .item-petition {
+  padding: 0 0 10px 0;
   box-sizing: border-box;
   height: 316px;
+  width: 100%;
   color: black;
   border-radius: 10px;
   background-color: #fff;
+  overflow: hidden;
 }
 

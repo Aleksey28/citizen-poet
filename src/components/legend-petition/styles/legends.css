@@ -5,6 +5,7 @@
 
 .legends-petition {
   margin: 0 auto;
-  grid-row: 4 / span 8;
-  grid-column: 4;
+  flex: 1 1 auto;
+  width: 120px;
+  height: 328px;
 }
