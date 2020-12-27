@@ -145,7 +145,7 @@ const PageNewPetition = ({ poemsText, defaultValue, onBack, onContinue, onAddDat
 
       <div className={classes.buttons}>
         <Button handleClickOnButton={handleClickOnBack}>
-          Вернуться назад
+          Назад
         </Button>
         <Submit>
           {({ disabled }) => (

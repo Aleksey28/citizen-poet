@@ -1,0 +1,5 @@
+.main__button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
