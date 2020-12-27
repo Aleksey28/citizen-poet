@@ -25,6 +25,7 @@ const SearchPetition = ({ setMode }) => {
         el.querySelector('.item-petition__author').style.display = 'none';
         el.querySelector('.info-petition__action').style.display = 'none'
         el.querySelector('.item-petition__text').style.width = '100%';
+        el.querySelector('.item-petition__text').style.height = '32px';
       })
     } else {
       listPetition.style.gridTemplateColumns = 'repeat(auto-fit, 264px)';
@@ -35,7 +36,7 @@ const SearchPetition = ({ setMode }) => {
         el.querySelector('.item-petition__author').style.display = 'block';
         el.querySelector('.info-petition__action').style.display = 'block';
         el.querySelector('.item-petition__text').style.width = '240px';
-
+        el.querySelector('.item-petition__text').style.height = '68px';
       })
     }
   }
