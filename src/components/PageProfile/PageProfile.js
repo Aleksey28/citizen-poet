@@ -17,14 +17,12 @@ const PageProfile = () => {
   const [userData, setUserData] = useState({});
 
   function handleLogIn(statusLogIn) {
-    // debugger;
     setLoggedIn(statusLogIn);
   }
 
   useEffect(() => {
 
     apiObject.getUserData().then(data => {
-      // debugger;
       if (data) {
         handleLogIn(true);
         setUserData(data);
@@ -36,7 +34,6 @@ const PageProfile = () => {
     console.log(data);
   };
 
-  // debugger;
   return (
     <Switch>
        <Route path={`${path}/info`}>

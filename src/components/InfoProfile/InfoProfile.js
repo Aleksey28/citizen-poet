@@ -10,7 +10,6 @@ const InfoProfile = ({userData, url, handleLogIn}) => {
 
   // функция отоброджения аватарки, если null значит дефолтная иконка, если есть дата или url, грузил по ним
   const profileIcon = function(avatar) {
-    // debugger;
     if (avatar == null) {
       return <DefaultIcon className="info-profile__avatar"/>
     } else {
@@ -24,7 +23,6 @@ const InfoProfile = ({userData, url, handleLogIn}) => {
     history.push(`${url}/login`);
     handleLogIn(false);
   }
-  // debugger;
   return (
     <div className="info-profile">
       {

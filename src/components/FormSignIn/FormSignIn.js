@@ -67,7 +67,7 @@ const FormSignIn = ({ onLogIn, url }) => {
           history.push(`${url}/info`);
         }
       })
-      .catch(console.log);
+      .catch(alert);
   };
 
   return (
