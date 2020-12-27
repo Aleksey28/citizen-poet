@@ -39,7 +39,7 @@ const PageNewPetition = ({poemsText}) => {
       <FormNewPetition poemsText={poemsText} defaultValue={dataForSend} onBack={handleShowSelectCategory}
                        onContinue={handleShowPreviewNewPetition} onAddData={handleAddData}/>}
       {showPreviewNewPetition &&
-      <PreviewNewPetition data={dataForSend} onBack={handleShowFormNewPetition}/>
+      <PreviewNewPetition poemsText={poemsText} data={dataForSend} onBack={handleShowFormNewPetition}/>
       }
     </div>
   );
