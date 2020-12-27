@@ -1,6 +1,9 @@
 .main__text {
-  margin: 0 22px 0 0;
-  padding: 15px 15px 15px 15px;
+  padding: 48px;
   background-color: #fff;
   border-radius: 8px;
+  max-width: 552px;
+  box-sizing: border-box;
+  margin-right: 24px;
+  overflow: auto;
 }

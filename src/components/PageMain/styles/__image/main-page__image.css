@@ -1,0 +1,6 @@
+.main-page__image {
+  border-radius: 8px;
+  max-width: 552px;
+  object-fit: cover;
+  object-position: center;
+}

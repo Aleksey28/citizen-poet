@@ -1,8 +1,8 @@
 .main__title {
-  margin: 0;
-
-  font-size: 45px;
+  font-size: 28px;
+  font-weight: 600;
   font-style: normal;
-  line-height: 53px;
-  text-align: left;
+  line-height: 36px;
+  color: #1a263d;
+  margin-bottom: 24px;
 }
