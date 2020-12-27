@@ -3,6 +3,7 @@ import { Field, Form, Submit } from "../Form/Form";
 import classes from "./FormSignIn.module.css";
 import Button from "../Button/Button";
 import { apiObject } from "../../util/api";
+import { Link, useHistory } from "react-router-dom";
 
 const validators = {
   email: {
@@ -10,7 +11,7 @@ const validators = {
       return value === "";
     },
     isEmail: (value) => {
-      return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(value);
+      return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i.test(value);
     },
   },
   password: {
@@ -41,7 +42,9 @@ const getErrorMessage = (typeOfError, value = "") => {
   return errorMessage;
 };
 
-const FormSignIn = ({onLogIn}) => {
+const FormSignIn = ({ onLogIn, url }) => {
+
+  const history = useHistory();
 
   //Стейт всех значений формы
   const [formValues, setFormValues] = useState({});
@@ -53,14 +56,15 @@ const FormSignIn = ({onLogIn}) => {
 
   const handleSubmit = ({ email, password }) => {
     // здесь нужно будет добавить логин
-    if (!email || !password){
+    if (!email || !password) {
       return;
     }
-    apiObject.signIn({email, password})
+    apiObject.signIn({ email, password })
       .then((data) => {
-        if(data.token) {
-          localStorage.setItem('jwt', data.token);
+        if (data.token) {
+          localStorage.setItem("jwt", data.token);
           onLogIn(true);
+          history.push(`${url}/info`);
         }
       })
       .catch(console.log);
@@ -133,7 +137,7 @@ const FormSignIn = ({onLogIn}) => {
       </Submit>
       <div className={classes.registration}>
         <p className={classes.text}>Еще не зарегистрированы?</p>
-        <button type="button" className={classes.link} >Зарегистрироваться</button>
+        <Link className={classes.link} to={`${url}/register`}>Зарегистрироваться</Link>
       </div>
     </Form>
   );

@@ -1,36 +1,38 @@
 import './styles/InfoProfile.css';
 import DefaultIcon from '../icons/profile/DefaultIcon';
+import { useHistory } from "react-router-dom";
 
 
 
+const InfoProfile = ({userData, url, handleLogIn}) => {
 
-const InfoProfile = ({user, statusLogIn}) => {
+  const history = useHistory();
 
   // функция отоброджения аватарки, если null значит дефолтная иконка, если есть дата или url, грузил по ним
-  const profileIcon = function(logo) {
-    if (logo == null) {
-      return <DefaultIcon className="info-profile__avatar"/> 
+  const profileIcon = function(avatar) {
+    // debugger;
+    if (avatar == null) {
+      return <DefaultIcon className="info-profile__avatar"/>
     } else {
-      return <img src="http://i1.ytimg.com/vi/XKFSikgM0yY/maxresdefault.jpg" alt="Аватар пользователя" className="info-profile__avatar"/>
+      return <img src={avatar} alt="Аватар пользователя" className="info-profile__avatar"/>
     };
   }
 
   // если пользователь нажал выйти, уходим на страницу логина
   const logOut = () => {
-    const storage = window.localStorage;
-    storage.setItem('log', 'false')
-    console.log((!storage.getItem('log')))
-    statusLogIn(false);
+    localStorage.removeItem('jwt');
+    history.push(`${url}/login`);
+    handleLogIn(false);
   }
-
+  // debugger;
   return (
     <div className="info-profile">
       {
-        profileIcon(user.logo)
+        profileIcon(userData.avatar)
       }
-      <h2 className="info-profile__name">{user.fullName()}</h2>
-      <p className='info-profile__text'>Ваш рейтинг: {user.reiting}</p>
-      <p className='info-profile__text'>Создано петиций: {user.petitonCount}</p>
+      <h2 className="info-profile__name">{`${userData.firstName} ${userData.secondName} ${userData.middleName}`}</h2>
+      <p className='info-profile__text'>Ваш рейтинг: 0</p>
+      <p className='info-profile__text'>Создано петиций: 0</p>
       <button type='button' className='info-profile__log-out' onClick={logOut}>Выйти</button>
     </div>
   )

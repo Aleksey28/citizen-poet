@@ -40,6 +40,23 @@ class Api {
     return await this._handleResponse(response);
   }
 
+  async signUp({ email, password, firstName, secondName, middleName, birthDate, avatar }) {
+    const response = await this._getProxy(
+      "/signup",
+      "POST",
+      JSON.stringify({
+                       email,
+                       password,
+                       firstName,
+                       secondName,
+                       middleName,
+                       birthDate,
+                       avatar,
+                     }),
+    );
+    return await this._handleResponse(response);
+  }
+
   async getUsers() {
     const response = await this._getProxy("/users", "GET");
     return await this._handleResponse(response);

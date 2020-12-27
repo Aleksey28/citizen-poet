@@ -1,28 +1,33 @@
 import "./PageProfile.css";
 import React, { useEffect, useState } from "react";
+import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
 import ListPetition from "../ListPetition/ListPetition";
 import InfoProfile from "../InfoProfile/InfoProfile";
 import user from "../../data/user__prof";
 import userPetition from "../../data/user__pet";
 import FormSignIn from "../FormSignIn/FormSignIn";
 import { apiObject } from "../../util/api";
+import Register from "../Register/Register";
 
 const PageProfile = () => {
 
-  // получение доступа к локальному хранилищу
-  const storage = window.localStorage;
-  const userStatus = storage.getItem("log");
-  // use state если false показываем старницу регестрации, если true страницу профиля
-  const [loggedIn, setLoggedIn] = useState(!userStatus);
+  const { path, url } = useRouteMatch();
+
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [userData, setUserData] = useState({});
 
   function handleLogIn(statusLogIn) {
+    // debugger;
     setLoggedIn(statusLogIn);
   }
 
   useEffect(() => {
+
     apiObject.getUserData().then(data => {
+      // debugger;
       if (data) {
         handleLogIn(true);
+        setUserData(data);
       }
     });
   }, []);
@@ -31,11 +36,28 @@ const PageProfile = () => {
     console.log(data);
   };
 
+  // debugger;
   return (
-    loggedIn ? <div className="page-profile">
-      <InfoProfile user={user} statusLogIn={handleLogIn}/>
-      <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
-    </div> : <FormSignIn onLogIn={handleLogIn}/>);
+    <Switch>
+       <Route path={`${path}/info`}>
+        <div className="page-profile">
+          <InfoProfile userData={userData} handleLogIn={handleLogIn} url={url}/>
+          <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
+        </div>
+      </Route>
+      <Route path={`${path}/register`}>
+        <Register url={url}/>
+      </Route>
+      <Route path={`${path}/login`}>
+        <FormSignIn onLogIn={handleLogIn} url={url}/>
+      </Route>
+      <Route exact path={`${path}`}>
+        {loggedIn ? <Redirect to={`${url}/info`}/> : <Redirect to={`${url}/login`}/>}
+      </Route>
+    </Switch>
+
+  );
+
 };
 
 export default PageProfile;
