@@ -1,46 +1,41 @@
-import './PageProfile.css';
-import React from "react";
-import ListPetition from '../ListPetition/ListPetition';
+import "./PageProfile.css";
+import React, { useEffect, useState } from "react";
+import ListPetition from "../ListPetition/ListPetition";
 import InfoProfile from "../InfoProfile/InfoProfile";
-import user from '../../data/user__prof';
-import userPetition from '../../data/user__pet';
-import UserLogIn from '../UserLogIn/UserLogIn';
-import {useState} from 'react'
+import user from "../../data/user__prof";
+import userPetition from "../../data/user__pet";
+import FormSignIn from "../FormSignIn/FormSignIn";
+import { apiObject } from "../../util/api";
 
 const PageProfile = () => {
 
   // получение доступа к локальному хранилищу
   const storage = window.localStorage;
-  const userStatus = storage.getItem('log')
+  const userStatus = storage.getItem("log");
   // use state если false показываем старницу регестрации, если true страницу профиля
-  const [statusLogIn, setUserLogIn] = useState(!userStatus);
-  
+  const [loggedIn, setLoggedIn] = useState(!userStatus);
 
- 
-
-  function showMode() {
-    if (statusLogIn) {
-      console.log(statusLogIn)
-      return (
-      <div className="page-profile">
-        <InfoProfile user={user} statusLogIn={logIn}/>
-        <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
-    </div>)
-    } else {
-      return (<UserLogIn  statusLogIn={logIn}/>)
-    }
+  function handleLogIn(statusLogIn) {
+    setLoggedIn(statusLogIn);
   }
 
-  function logIn(statusLogIn) {
-    setUserLogIn(statusLogIn);
-  }
+  useEffect(() => {
+    apiObject.getUserData().then(data => {
+      if (data) {
+        handleLogIn(true);
+      }
+    });
+  }, []);
 
   const handleClickOnPetition = (data) => {
     console.log(data);
-  }
+  };
+
   return (
-    showMode()
-  );
-}
+    loggedIn ? <div className="page-profile">
+      <InfoProfile user={user} statusLogIn={handleLogIn}/>
+      <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
+    </div> : <FormSignIn onLogIn={handleLogIn}/>);
+};
 
 export default PageProfile;

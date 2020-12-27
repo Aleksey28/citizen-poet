@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import { Field, Form, Submit } from "../Form/Form";
 import classes from "./FormSignIn.module.css";
 import Button from "../Button/Button";
+import { apiObject } from "../../util/api";
 
 const validators = {
   email: {
@@ -40,33 +41,7 @@ const getErrorMessage = (typeOfError, value = "") => {
   return errorMessage;
 };
 
-const FormSignIn = ({ statusLogIn }) => {
-  //
-  //  const [seeMode, setSeeMode] = useState(true);
-  //
-  // const inputKeyEnter = (e) => {
-  //  if(e.key == 'Enter'){
-  //    alert('enter press here! ')
-  //  }
-  // }
-
-  // при нажатии на кнопку регистрация будет показана форма регистрации и если назад в регестрации то форма логина
-  // const showPage = () => {
-  //   setSeeMode(!seeMode);
-  // }
-
-  // настраиваем что паказываем
-  //  const showMode = () => {
-  // if (seeMode) {
-  //   return (
-  //   <form name='userLogIn' className='from-signin'>
-  //     <h2 className='from-signin__title'>Вход</h2>
-  //     <input type='text' className='from-signin__input' id='log-in' placeholder='Email' onKeyPress={inputKeyEnter}/>
-  //     <input type='password' className='from-signin__input' id='password' placeholder='Пароль'
-  // onKeyPress={inputKeyEnter} /> <div className='from-signin__action'> <p className='from-signin__text'>Еще не
-  // зарегистрированы?</p> <button type='button' className='from-signin__link'
-  // onClick={showPage}>Зарегистрироваться</button> </div> </form>) } else { return ( <Register showPage={showPage}
-  // statusLogIn={statusLogIn}/> ) } }
+const FormSignIn = ({onLogIn}) => {
 
   //Стейт всех значений формы
   const [formValues, setFormValues] = useState({});
@@ -76,15 +51,26 @@ const FormSignIn = ({ statusLogIn }) => {
     setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
   }, []);
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = ({ email, password }) => {
+    // здесь нужно будет добавить логин
+    if (!email || !password){
+      return;
+    }
+    apiObject.signIn({email, password})
+      .then((data) => {
+        if(data.token) {
+          localStorage.setItem('jwt', data.token);
+          onLogIn(true);
+        }
+      })
+      .catch(console.log);
   };
 
   return (
     <Form name="formSignIn"
           className={classes.from}
           validators={validators}
-          onSubmit={onChangeInput}
+          onSubmit={handleSubmit}
           onChangeInput={onChangeInput}
           formValues={formValues}>
       <h2 className={classes.title}>Вход</h2>
@@ -139,6 +125,7 @@ const FormSignIn = ({ statusLogIn }) => {
             disabled={disabled}
             style={{ width: "264px" }}
             isMainButton={true}
+            handleClickOnButton={() => {}}
           >
             Войти
           </Button>
@@ -146,7 +133,7 @@ const FormSignIn = ({ statusLogIn }) => {
       </Submit>
       <div className={classes.registration}>
         <p className={classes.text}>Еще не зарегистрированы?</p>
-        <button type="button" className={classes.link}>Зарегистрироваться</button>
+        <button type="button" className={classes.link} >Зарегистрироваться</button>
       </div>
     </Form>
   );

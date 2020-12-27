@@ -1,12 +1,12 @@
-import classes from './FormNewPetition.module.css';
-import React, {useCallback, useState} from "react";
+import classes from "./FormNewPetition.module.css";
+import React, { useCallback, useState } from "react";
 import Button from "../Button/Button";
-import {Field, Form, Submit} from "../Form/Form";
+import { Field, Form, Submit } from "../Form/Form";
 
 const validators = {
   name: {
     required: (value) => {
-      return value === '';
+      return value === "";
     },
     minLength: (value) => {
       return value.length < 2;
@@ -14,7 +14,7 @@ const validators = {
   },
   to: {
     required: (value) => {
-      return value === '';
+      return value === "";
     },
     minLength: (value) => {
       return value.length < 2;
@@ -22,7 +22,7 @@ const validators = {
   },
   description: {
     required: (value) => {
-      return value === '';
+      return value === "";
     },
     minLength: (value) => {
       return value.length < 2;
@@ -30,39 +30,39 @@ const validators = {
   },
 };
 
-const getErrorMessage = (typeOfError, value = '') => {
+const getErrorMessage = (typeOfError, value = "") => {
   let errorMessage;
   switch (typeOfError) {
-    case 'required':
-      errorMessage = 'Вы пропустили это поле.';
+    case "required":
+      errorMessage = "Вы пропустили это поле.";
       break;
-    case 'minLength':
+    case "minLength":
       errorMessage = `Минимальное количество символов: 2. Длина текста сейчас: ${value.length} символ.`;
       break;
     default:
-      errorMessage = '';
+      errorMessage = "";
   }
   return errorMessage;
 };
 
-const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData}) => {
+const PageNewPetition = ({ poemsText, defaultValue, onBack, onContinue, onAddData }) => {
 
   //Стейт всех значений формы
   const [formValues, setFormValues] = useState({});
 
   const onChangeInput = useCallback((name, value) => {
     //Обновляем стейт всех значений формы
-    setFormValues((prevValues) => ({...prevValues, [name]: value}));
+    setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
   }, []);
 
   const handleOnPreview = (values) => {
     onAddData(values);
     onContinue();
-  }
+  };
 
   const handleClickOnBack = () => {
     onBack();
-  }
+  };
 
   return (
     <Form
@@ -75,14 +75,14 @@ const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData
       defaultValues={{
         name: defaultValue.name,
         to: defaultValue.to,
-        description: defaultValue.description
+        description: defaultValue.description,
       }}
     >
       <fieldset className={classes.fieldset}>
         <Field name="name">
-          {({onChange, value, errors, showError, ...inputProps}) => {
+          {({ onChange, value, errors, showError, ...inputProps }) => {
             const typeOfError =
-              (!!errors && Object.keys(errors).find((key) => errors[key] === true)) || '';
+              (!!errors && Object.keys(errors).find((key) => errors[key] === true)) || "";
             const errorMessage = getErrorMessage(typeOfError, value);
             return (
               <div className={classes.field}>
@@ -100,9 +100,9 @@ const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData
           }}
         </Field>
         <Field name="to">
-          {({onChange, value, errors, showError, ...inputProps}) => {
+          {({ onChange, value, errors, showError, ...inputProps }) => {
             const typeOfError =
-              (!!errors && Object.keys(errors).find((key) => errors[key] === true)) || '';
+              (!!errors && Object.keys(errors).find((key) => errors[key] === true)) || "";
             const errorMessage = getErrorMessage(typeOfError, value);
             return (
               <div className={classes.field}>
@@ -120,9 +120,9 @@ const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData
           }}
         </Field>
         <Field name="description">
-          {({onChange, value, errors, showError, ...inputProps}) => {
+          {({ onChange, value, errors, showError, ...inputProps }) => {
             const typeOfError =
-              (!!errors && Object.keys(errors).find((key) => errors[key] === true)) || '';
+              (!!errors && Object.keys(errors).find((key) => errors[key] === true)) || "";
             const errorMessage = getErrorMessage(typeOfError, value);
             return (
               <div className={classes.field}>
@@ -148,7 +148,7 @@ const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData
           Вернуться назад
         </Button>
         <Submit>
-          {({disabled}) => (
+          {({ disabled }) => (
             <button
               className={classes.submit}
               type="submit"
@@ -161,6 +161,6 @@ const PageNewPetition = ({poemsText, defaultValue, onBack, onContinue, onAddData
       </div>
     </Form>
   );
-}
+};
 
 export default PageNewPetition;
