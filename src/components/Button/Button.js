@@ -4,7 +4,7 @@ import React from "react";
 const Button = ({handleClickOnButton, isMainButton, type, children, extensionClass = "", ...props}) => {
 
   const onButtonClick = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     handleClickOnButton();
   }
 

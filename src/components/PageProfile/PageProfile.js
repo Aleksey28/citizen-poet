@@ -1,46 +1,60 @@
-import './PageProfile.css';
-import React from "react";
-import ListPetition from '../ListPetition/ListPetition';
+import "./PageProfile.css";
+import React, { useEffect, useState } from "react";
+import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
+import ListPetition from "../ListPetition/ListPetition";
 import InfoProfile from "../InfoProfile/InfoProfile";
-import user from '../../data/user__prof';
-import userPetition from '../../data/user__pet';
-import UserLogIn from '../UserLogIn/UserLogIn';
-import {useState} from 'react'
+import user from "../../data/user__prof";
+import userPetition from "../../data/user__pet";
+import FormSignIn from "../FormSignIn/FormSignIn";
+import { apiObject } from "../../util/api";
+import Register from "../Register/Register";
 
 const PageProfile = () => {
 
-  // получение доступа к локальному хранилищу
-  const storage = window.localStorage;
-  const userStatus = storage.getItem('log')
-  // use state если false показываем старницу регестрации, если true страницу профиля
-  const [statusLogIn, setUserLogIn] = useState(!userStatus);
-  
+  const { path, url } = useRouteMatch();
 
- 
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [userData, setUserData] = useState({});
 
-  function showMode() {
-    if (statusLogIn) {
-      console.log(statusLogIn)
-      return (
-      <div className="page-profile">
-        <InfoProfile user={user} statusLogIn={logIn}/>
-        <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
-    </div>)
-    } else {
-      return (<UserLogIn  statusLogIn={logIn}/>)
-    }
+  function handleLogIn(statusLogIn) {
+    setLoggedIn(statusLogIn);
   }
 
-  function logIn(statusLogIn) {
-    setUserLogIn(statusLogIn);
-  }
+  useEffect(() => {
+
+    apiObject.getUserData().then(data => {
+      if (data) {
+        handleLogIn(true);
+        setUserData(data);
+      }
+    });
+  }, []);
 
   const handleClickOnPetition = (data) => {
     console.log(data);
-  }
+  };
+
   return (
-    showMode()
+    <Switch>
+       <Route path={`${path}/info`}>
+        <div className="page-profile">
+          <InfoProfile userData={userData} handleLogIn={handleLogIn} url={url}/>
+          <ListPetition listPetition={userPetition} onPetitionClick={handleClickOnPetition}/>
+        </div>
+      </Route>
+      <Route path={`${path}/register`}>
+        <Register url={url}/>
+      </Route>
+      <Route path={`${path}/login`}>
+        <FormSignIn onLogIn={handleLogIn} url={url}/>
+      </Route>
+      <Route exact path={`${path}`}>
+        {loggedIn ? <Redirect to={`${url}/info`}/> : <Redirect to={`${url}/login`}/>}
+      </Route>
+    </Switch>
+
   );
-}
+
+};
 
 export default PageProfile;
