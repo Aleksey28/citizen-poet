@@ -12,7 +12,7 @@ class User {
   }
 
   fullName() {
-    return this.name + ' ' +  this.soname + ' ' + this.lastName
+    return `${this.name}  ${this.soname} ${this.lastName}`
   }
 }
 

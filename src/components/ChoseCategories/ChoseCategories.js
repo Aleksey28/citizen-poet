@@ -1,21 +1,21 @@
-import React, {useState} from "react";
-import {categories} from "../../util/constants";
+import React, { useState } from "react";
+import { categories } from "../../util/constants";
 import classes from "./ChoseCategories.module.css";
 import Category from "./Category/Category";
 import Button from "../Button/Button";
 
-const ChoseCategories = ({onContinue, onAddData}) => {
+const ChoseCategories = ({ onContinue, onAddData }) => {
 
   const [selectedCategory, setSelectedCategory] = useState({});
 
   const handleClickCategory = (category) => {
     setSelectedCategory(category);
-  }
+  };
 
   const handleShowContinue = () => {
-    onAddData({category: selectedCategory.id})
+    onAddData({ category: selectedCategory.id });
     onContinue();
-  }
+  };
 
   return (
     <div className={classes.block}>
@@ -26,7 +26,10 @@ const ChoseCategories = ({onContinue, onAddData}) => {
           в схожих вопросах.</p>
         <ul className={classes.list}>
           {categories.map(item => {
-            return <Category data={item} selectedCategory={selectedCategory} onClick={handleClickCategory}/>
+            return <Category key={item.id}
+                             data={item}
+                             selectedCategory={selectedCategory}
+                             onClick={handleClickCategory}/>;
           })}
         </ul>
       </section>
@@ -35,7 +38,7 @@ const ChoseCategories = ({onContinue, onAddData}) => {
                 disabled={!Object.keys(selectedCategory).length}>Продолжить</Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ChoseCategories
+export default ChoseCategories;

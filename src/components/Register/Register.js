@@ -66,30 +66,22 @@ const validators = {
 };
 
 const getErrorMessage = (typeOfError, value = "") => {
-  let errorMessage;
   switch (typeOfError) {
     case "required":
-      errorMessage = "Вы пропустили это поле.";
-      break;
+      return "Вы пропустили это поле.";
     case "minLength":
-      errorMessage = `Минимальное количество символов: 2. Длина текста сейчас: ${value.length} символ.`;
-      break;
+      return `Минимальное количество символов: 2. Длина текста сейчас: ${value.length} символ.`;
     case "minLengthPassword":
-      errorMessage = `Минимальное количество символов: 8. Длина текста сейчас: ${value.length} символ.`;
-      break;
+      return `Минимальное количество символов: 8. Длина текста сейчас: ${value.length} символ.`;
     case "maxLength":
-      errorMessage = `Максимальное количество символов: 30. Длина текста сейчас: ${value.length} символ.`;
-      break;
+      return `Максимальное количество символов: 30. Длина текста сейчас: ${value.length} символ.`;
     case "isEmail":
-      errorMessage = `Неправильно введен E-mail.`;
-      break;
+      return `Неправильно введен E-mail.`;
     case "isData":
-      errorMessage = `Дата должна иметь формат dd.mm.yyyy.`;
-      break;
+      return `Дата должна иметь формат dd.mm.yyyy.`;
     default:
-      errorMessage = "";
+      return "";
   }
-  return errorMessage;
 };
 
 const Register = ({ url }) => {
@@ -111,7 +103,7 @@ const Register = ({ url }) => {
         alert("Вы зарегистрировались, войдите в систему с введенным e-mail и паролем.");
         history.push(`${url}/login`);
       }
-    }).catch(console.log);
+    }).catch(console.error);
   };
 
   return (

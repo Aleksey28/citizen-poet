@@ -1,46 +1,45 @@
-import './App.css';
-import dataPet from '../../data/all_pet';
+import "./App.css";
+import dataPet from "../../data/all_pet";
 import NavBar from "../NavBar/NavBar";
 import PageMain from "../PageMain/PageMain";
 import PagePetition from "../PagePetition/PagePetition";
-import {Route, Switch} from 'react-router-dom'
-import React from "react";
-import {useState, useEffect} from "react";
+import { Route, Switch } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import PageProfile from "../PageProfile/PageProfile";
 import PageNewPetition from "../PageNewPetition/PageNewPetition";
-import poems from '../../data/all_django.json';
+import poems from "../../data/all_django.json";
 
 function App() {
 
   const [listPetition, setListPetition] = useState([]);
-  const [poemsText, setPoemsText] = useState('');
+  const [poemsText, setPoemsText] = useState("");
 
   useEffect(() => {
     new Promise((resolve) => {
-      resolve(poems.reduce((res, item) => res + item.fields.text.split(/[.!?]/).join('\n'), ''));
+      resolve(poems.reduce((res, item) => res + item.fields.text.split(/[.!?]/).join("\n"), ""));
     }).then(text => {
       setPoemsText(text);
-    })
-  }, [])
+    });
+  }, []);
 
   useEffect(() => {
     setListPetition(dataPet);
-  }, [])
+  }, []);
 
   return (
     <div className="app">
       <NavBar/>
       <Switch>
-        <Route exact path={'/'}>
+        <Route exact path={"/"}>
           <PageMain/>
         </Route>
-        <Route path={'/petition'}>
+        <Route path={"/petition"}>
           <PagePetition listPetition={listPetition}/>
         </Route>
-        <Route path={'/new-petition'}>
+        <Route path={"/new-petition"}>
           <PageNewPetition poemsText={poemsText}/>
         </Route>
-        <Route path={'/profile'}>
+        <Route path={"/profile"}>
           <PageProfile listPetition={listPetition}/>
         </Route>
       </Switch>

@@ -27,11 +27,11 @@ const PageMain = () => {
         <p className="main__subtitle">
           Последний раздел, это раздел вашего профиля, в которм вы можете видеть свои петиции.
         </p>
-        <Link to={"/petition"} className="main__button">
-          <Button isMainButton={true} style={{width: '328px'}}>Перейти к петициям</Button>
+        <Link to="/petition" className="main__button">
+          <Button isMainButton={true} style={{ width: "328px" }}>Перейти к петициям</Button>
         </Link>
       </div>
-      <img src={imageMain} alt={"imageMain"} className="main-page__image"/>
+      <img src={imageMain} alt="Сюрреалистичное изображение" className="main-page__image"/>
     </div>
   );
 };

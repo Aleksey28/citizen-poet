@@ -3,7 +3,7 @@
 @import url('./__text/legends__text.css');
 @import url('./__icon/legends__icon.css');
 
-.legends-petition {
+.legends {
   margin: 0 auto;
   flex: 1 1 auto;
   width: 120px;

@@ -1,14 +1,14 @@
 @import '__header/info-petition__header.css';
-@import '__back-button/header__back-button.css';
-@import '__title/header__title.css';
+@import '__back-button/info-petition__back-button.css';
+@import '__title/info-petition__title.css';
 
 .info-petition {
-  margin: 0;
-  flex: 20 1 auto;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: #EBEEF3;
-  padding: 10px 0 10px 0;
+  flex: 20 1 auto;
   box-sizing: border-box;
-  border: 1px red solid;
+  margin: 0;
+  padding: 10px 0;
+  border: 1px #f00 solid;
+  background-color: #ebeef3;
 }
