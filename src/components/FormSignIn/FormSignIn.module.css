@@ -1,5 +1,5 @@
 .from {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -43,13 +43,13 @@
   box-sizing: border-box;
   width: 552px;
   height: 76px;
+  margin-bottom: 4px;
   padding: 24px;
   color: #1a263d;
-  border-radius: 8px;
-  background-color: #ebeef3;
   border: none;
+  border-radius: 8px;
   outline: none;
-  margin-bottom: 4px;
+  background-color: #ebeef3;
 }
 
 .field input::placeholder {
@@ -57,9 +57,9 @@
 }
 
 .field span {
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 16px;
   padding-left: 19px;
   color: #cf4d4d;

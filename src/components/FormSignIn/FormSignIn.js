@@ -25,21 +25,16 @@ const validators = {
 };
 
 const getErrorMessage = (typeOfError, value = "") => {
-  let errorMessage;
   switch (typeOfError) {
     case "required":
-      errorMessage = "Вы пропустили это поле.";
-      break;
+      return "Вы пропустили это поле.";
     case "minLength":
-      errorMessage = `Минимальное количество символов: 8. Длина текста сейчас: ${value.length} символ.`;
-      break;
+      return `Минимальное количество символов: 8. Длина текста сейчас: ${value.length} символ.`;
     case "isEmail":
-      errorMessage = `Неправильно введен E-mail.`;
-      break;
+      return `Неправильно введен E-mail.`;
     default:
-      errorMessage = "";
+      return "";
   }
-  return errorMessage;
 };
 
 const FormSignIn = ({ onLogIn, url }) => {
