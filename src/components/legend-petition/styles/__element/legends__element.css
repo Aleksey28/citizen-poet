@@ -1,0 +1,8 @@
+.legends__element {
+  margin: 20px 0 5px 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+

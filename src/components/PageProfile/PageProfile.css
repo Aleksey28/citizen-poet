@@ -1,0 +1,8 @@
+.page-profile {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 30px 30px 30px 30px;
+  background-color: #ebeef3;
+}

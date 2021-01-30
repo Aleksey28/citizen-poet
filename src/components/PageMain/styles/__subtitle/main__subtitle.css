@@ -1,0 +1,12 @@
+.main__subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 22px;
+  margin-bottom: 24px;
+  color: #1a263d;
+}
+
+.main__subtitle:last-of-type {
+  margin-bottom: 52px;
+}

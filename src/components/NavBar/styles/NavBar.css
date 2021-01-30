@@ -1,0 +1,16 @@
+@import url('__link/nav__link.css');
+@import url('__link/_active/nav__link_active.css');
+@import url('__icon/nav__icon.css');
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 180px;
+  height: 100%;
+  padding: 54px 66px 0;
+  background-color: #1a263d;
+}
+

@@ -1,0 +1,12 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  background-color: #EBEEF3;
+}

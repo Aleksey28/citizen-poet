@@ -1,0 +1,14 @@
+@import url('__icon/search__icon.css');
+@import url('__link/search__link.css');
+@import url('../styles/__input-petition/search__input-petition.css');
+
+.search-petition {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-row: 1;
+  grid-column: 1 / span 4;
+}

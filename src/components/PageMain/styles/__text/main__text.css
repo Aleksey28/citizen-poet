@@ -1,0 +1,9 @@
+.main__text {
+  padding: 48px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 552px;
+  box-sizing: border-box;
+  margin-right: 24px;
+  overflow: auto;
+}

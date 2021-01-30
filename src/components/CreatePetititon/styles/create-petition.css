@@ -1,0 +1,13 @@
+@import url('../styles/__title/create-petition__title.css');
+@import url('../styles/__button/create-petition__button.css');
+
+.create-petition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  background-color: #fff;
+  grid-row: 10;
+  grid-column: 1 / span 4;
+
+}

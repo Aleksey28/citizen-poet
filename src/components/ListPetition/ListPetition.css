@@ -1,0 +1,13 @@
+.list-petition {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  margin: 5px 0 10px 0;
+  flex: 3 1 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 264px);
+  align-items: center;
+  align-content: flex-start;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  gap: 20px;
+}

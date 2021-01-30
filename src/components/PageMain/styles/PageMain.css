@@ -1,0 +1,15 @@
+@import url('__text/main__text.css');
+@import url('__title/main__title.css');
+@import url('__subtitle/main__subtitle.css');
+@import url('__image/main-page__image.css');
+@import url('__button/main__button.css');
+
+.main {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+  margin: auto;
+  padding: 30px 30px 30px 30px;
+  background-color: #ebeef3;
+}
